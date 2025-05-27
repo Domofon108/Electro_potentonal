@@ -79,19 +79,18 @@ async def main():
     app.add_handler(CommandHandler("start", start))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, respond))
 
-    logger.info("Bot is running. Press Ctrl+C to stop.")
+    logger.info("Bot is running.")
     await app.run_polling()
+
 
 # Run safely
 if __name__ == "__main__":
-    try:
-        asyncio.run(main())
-    except RuntimeError as e:
-        if "asyncio.run()" in str(e) or "event loop is already running" in str(e):
-            nest_asyncio.apply()
-            loop = asyncio.get_event_loop()
-            loop.create_task(main())
-        else:
-            raise
+    import nest_asyncio
+    import asyncio
+
+    nest_asyncio.apply()
+    loop = asyncio.get_event_loop()
+    loop.create_task(main())
+    loop.run_forever()
 
 
