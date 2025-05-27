@@ -79,13 +79,8 @@ async def main():
     app.add_handler(CommandHandler("start", start))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, respond))
 
-    await app.initialize()
-    await app.start()
     logger.info("Bot is running. Press Ctrl+C to stop.")
-    await app.updater.start_polling()
-    await app.updater.wait_for_stop()
-    await app.stop()
-    await app.shutdown()
+    await app.run_polling()
 
 # Run safely
 if __name__ == "__main__":
@@ -98,3 +93,5 @@ if __name__ == "__main__":
             loop.create_task(main())
         else:
             raise
+
+
