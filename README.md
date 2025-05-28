@@ -48,12 +48,6 @@ Zn²⁺ + 2e⁻ ⇌ Zn | -0.76
 
 ---
 
-## 📁 Project Structure
-📦 Electro_potentonal
-├── 🧠 bot.py # Core logic of the Telegram bot
-├── 📊 Prepared_data.csv # Dataset of redox reactions and standard potentials
-├── 🔐 .env # Contains your TELEGRAM_BOT_TOKEN (keep it secret!)
-├── 📄 README.md # Project documentation
 
 ## 🧠 Data Source
 
