@@ -54,3 +54,11 @@ Zn²⁺ + 2e⁻ ⇌ Zn | -0.76
 ├── Prepared_data.csv # Redox reactions and potentials
 ├── .env # Contains your TELEGRAM_BOT_TOKEN
 └── README.md # Project documentation
+
+## 🧠 Data Source
+
+The Prepared_data.csv file contains a curated list of standard redox reactions and their electrode potentials, compiled from reputable electrochemical databases and textbooks.
+## 🤝 Contributing
+
+Pull requests, suggestions, and issue reports are welcome!
+Let’s make electrochemistry more accessible — together.
